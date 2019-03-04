@@ -244,7 +244,7 @@ public class Main {
             return versX.compareTo(versY) > 0;
 
 
-        } else return operator.equals("∀");
+        } else return operator.equals("anyOp");
 
 
     }
@@ -292,9 +292,9 @@ public class Main {
             nameCons = consArray.get(0);
             versionCons = consArray.get(1);
 
-            if (versionCons.equals("∀")) {
+            if (versionCons.equals("anyOp")) {
 
-                operator = "∀";
+                operator = "anyOp";
                 String[] c = nameCons.split(",");
                 nameCons = c[0];
 
@@ -508,9 +508,9 @@ public class Main {
             String operator;
 
 
-            if (versionCons.equals("∀")) {
+            if (versionCons.equals("anyOp")) {
 
-                operator = "∀";
+                operator = "anyOp";
                 String[] c = nameCons.split("");
                 nameCons = c[1];
 
@@ -524,7 +524,7 @@ public class Main {
 
             for (Package p : repo) {
 
-                if ((p.getName().equals(nameCons) && versionCons.equals("∀")) || (p.getName().equals(nameCons) && compareVersion(p.getVersion(), versionCons, operator))) {
+                if ((p.getName().equals(nameCons) && versionCons.equals("anyOp")) || (p.getName().equals(nameCons) && compareVersion(p.getVersion(), versionCons, operator))) {
 
                     statePackArray.add(p);
 
@@ -543,9 +543,9 @@ public class Main {
                 String versionCons = stateAsArray.get(1);
                 String operator;
 
-                if (versionCons.equals("∀")) {
+                if (versionCons.equals("anyOp")) {
 
-                    operator = "∀";
+                    operator = "anyOp";
 
                 } else {
 
@@ -573,9 +573,9 @@ public class Main {
                     String versionCons = stateAsArray.get(1);
                     String operator;
 
-                    if (versionCons.equals("∀")) {
+                    if (versionCons.equals("anyOp")) {
 
-                        operator = "∀";
+                        operator = "anyOp";
 
                     } else {
 
@@ -689,7 +689,7 @@ public class Main {
             input = input.replace("]", "");
 
             returnArray.add(input);
-            returnArray.add("∀");
+            returnArray.add("anyOp");
 
             return returnArray;
 
