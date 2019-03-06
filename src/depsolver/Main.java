@@ -244,7 +244,7 @@ public class Main {
             return versX.compareTo(versY) > 0;
 
 
-        } else return operator.equals("anyOp");
+        } else return operator.equals("Any");
 
 
     }
@@ -292,9 +292,9 @@ public class Main {
             nameCons = consArray.get(0);
             versionCons = consArray.get(1);
 
-            if (versionCons.equals("anyOp")) {
+            if (versionCons.equals("Any")) {
 
-                operator = "anyOp";
+                operator = "Any";
                 String[] c = nameCons.split(",");
                 nameCons = c[0];
 
@@ -504,13 +504,13 @@ public class Main {
             ArrayList<String> stateAsArray = splitString(T);
 
             String nameCons = stateAsArray.get(0);
-            String versionCons = stateAsArray.get(1);
+            String versionCons = stateAsArray.get(9);
             String operator;
 
 
-            if (versionCons.equals("anyOp")) {
+            if (versionCons.equals("Any")) {
 
-                operator = "anyOp";
+                operator = "Any";
                 String[] c = nameCons.split("");
                 nameCons = c[1];
 
@@ -524,7 +524,7 @@ public class Main {
 
             for (Package p : repo) {
 
-                if ((p.getName().equals(nameCons) && versionCons.equals("anyOp")) || (p.getName().equals(nameCons) && compareVersion(p.getVersion(), versionCons, operator))) {
+                if ((p.getName().equals(nameCons) && versionCons.equals("Any")) || (p.getName().equals(nameCons) && compareVersion(p.getVersion(), versionCons, operator))) {
 
                     statePackArray.add(p);
 
@@ -543,9 +543,9 @@ public class Main {
                 String versionCons = stateAsArray.get(1);
                 String operator;
 
-                if (versionCons.equals("anyOp")) {
+                if (versionCons.equals("Any")) {
 
-                    operator = "anyOp";
+                    operator = "Any";
 
                 } else {
 
@@ -573,9 +573,9 @@ public class Main {
                     String versionCons = stateAsArray.get(1);
                     String operator;
 
-                    if (versionCons.equals("anyOp")) {
+                    if (versionCons.equals("Any")) {
 
-                        operator = "anyOp";
+                        operator = "Any";
 
                     } else {
 
@@ -689,7 +689,7 @@ public class Main {
             input = input.replace("]", "");
 
             returnArray.add(input);
-            returnArray.add("anyOp");
+            returnArray.add("Any");
 
             return returnArray;
 
