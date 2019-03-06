@@ -212,7 +212,7 @@ public class Main {
 
             return versX.equals(versY);
 
-        } else if (operator.equals("<=")) {
+        } else if (operator.equals("<")) {
 
             if (versX.equals(versY)) {
 
@@ -224,13 +224,13 @@ public class Main {
 
             }
 
-        } else if (operator.equals("<")) {
+        } else if (operator.equals("<=")) {
 
 
             return versX.compareTo(versY) < 0;
 
 
-        } else if (operator.equals(">=")) {
+        } else if (operator.equals(">")) {
 
             if (versX.equals(versY)) {
                 return true;
@@ -239,7 +239,7 @@ public class Main {
                 return versX.compareTo(versY) > 0;
 
             }
-        } else if (operator.equals(">")) {
+        } else if (operator.equals(">=")) {
 
             return versX.compareTo(versY) > 0;
 
