@@ -634,28 +634,28 @@ public class Main {
 
             return returnArray;
 
-        } else if (input.contains(">=")) {
-
-            input = input.replace("[", "");
-            input = input.replace("]", "");
-
-            String[] spli_t = input.split(">=");
-            returnArray.add(spli_t[0]);
-            returnArray.add(spli_t[1]);
-            returnArray.add(">=");
-
-            return returnArray;
-
         } else if (input.contains("<")) {
 
             input = input.replace("[", "");
             input = input.replace("]", "");
 
             String[] spli_t = input.split("<");
-
             returnArray.add(spli_t[0]);
             returnArray.add(spli_t[1]);
             returnArray.add("<");
+
+            return returnArray;
+
+        } else if (input.contains(">=")) {
+
+            input = input.replace("[", "");
+            input = input.replace("]", "");
+
+            String[] spli_t = input.split(">=");
+
+            returnArray.add(spli_t[0]);
+            returnArray.add(spli_t[1]);
+            returnArray.add(">=");
 
             return returnArray;
 
