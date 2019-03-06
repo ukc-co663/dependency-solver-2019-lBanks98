@@ -634,7 +634,7 @@ public class Main {
 
             return returnArray;
 
-        } else if (input.contains(<")) {
+        } else if (input.contains("<")) {
 
             input = input.replace("[", "");
             input = input.replace("]", "");
