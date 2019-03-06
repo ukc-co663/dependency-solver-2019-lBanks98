@@ -622,19 +622,7 @@ public class Main {
 
         ArrayList returnArray = new ArrayList();
 
-        if (input.contains(">=")) {
-
-            input = input.replace("[", "");
-            input = input.replace("]", "");
-
-            String[] spli_t = input.split(">=");
-            returnArray.add(spli_t[0]);
-            returnArray.add(spli_t[1]);
-            returnArray.add(">=");
-
-            return returnArray;
-
-        } else if (input.contains("<=")) {
+        if (input.contains("<=")) {
 
             input = input.replace("[", "");
             input = input.replace("]", "");
@@ -646,16 +634,28 @@ public class Main {
 
             return returnArray;
 
-        } else if (input.contains("=")) {
+        } else if (input.contains(">=")) {
 
             input = input.replace("[", "");
             input = input.replace("]", "");
 
-            String[] spli_t = input.split("=");
+            String[] spli_t = input.split(">=");
+            returnArray.add(spli_t[0]);
+            returnArray.add(spli_t[1]);
+            returnArray.add(">=");
+
+            return returnArray;
+
+        } else if (input.contains("<")) {
+
+            input = input.replace("[", "");
+            input = input.replace("]", "");
+
+            String[] spli_t = input.split("<");
 
             returnArray.add(spli_t[0]);
             returnArray.add(spli_t[1]);
-            returnArray.add("=");
+            returnArray.add("<");
 
             return returnArray;
 
@@ -671,15 +671,15 @@ public class Main {
 
             return returnArray;
 
-        } else if (input.contains("<")) {
+        } else if (input.contains("=")) {
 
             input = input.replace("[", "");
             input = input.replace("]", "");
 
-            String[] spli_t = input.split("<");
+            String[] spli_t = input.split("=");
             returnArray.add(spli_t[0]);
             returnArray.add(spli_t[1]);
-            returnArray.add("<");
+            returnArray.add("=");
 
             return returnArray;
 
