@@ -504,7 +504,7 @@ public class Main {
             ArrayList<String> stateAsArray = splitString(T);
 
             String nameCons = stateAsArray.get(0);
-            String versionCons = stateAsArray.get(3);
+            String versionCons = stateAsArray.get(1);
             String operator;
 
 
