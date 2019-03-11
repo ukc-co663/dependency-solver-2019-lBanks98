@@ -135,7 +135,7 @@ public class Main {
 			// Then solutionHash Found
 			costOfSolution = costOfSolution(repo);
 			
-			String cTemp;
+			String cTemp = "";
 			// loop through commandsArray adding T
 			for (String T : commandsArray) {
 				cTemp = cTemp + T;
@@ -206,7 +206,7 @@ public class Main {
 			satisfies = true;
 			// solution is found
 			costOfSolution = costOfSolution(repo);
-			String cTemp;
+			String cTemp = "";
 			for (String T : commandsArray) {
 				cTemp = cTemp + T;
 				cTemp = cTemp + ",";
@@ -222,7 +222,7 @@ public class Main {
 		set_Iterator = set.iterator();
 
 		while (set_Iterator.hasNext()) {
-			String cTemp;
+			String cTemp = "";
 			cTemp = set_Iterator.next();
 			set_Iterator.remove();
 
