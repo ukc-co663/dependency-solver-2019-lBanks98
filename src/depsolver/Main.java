@@ -119,7 +119,7 @@ public class Main {
 	private static void find(List<String> set, List<Package> repo, List<String> initial, List<String> constraints) {
 
 		int costOfSolution;
-		String cTemp;
+		
 
 		if (packetValid(set, repo) == false) {
 			return;
@@ -134,7 +134,8 @@ public class Main {
 
 			// Then solutionHash Found
 			costOfSolution = costOfSolution(repo);
-
+			
+			String cTemp;
 			// loop through commandsArray adding T
 			for (String T : commandsArray) {
 				cTemp = cTemp + T;
